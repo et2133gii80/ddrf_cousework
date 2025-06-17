@@ -52,6 +52,23 @@ services:
       - redis
       - db
 
+#  nginx:
+#    build:
+#      context: ./nginx
+#    ports:
+#      - "80:80"
+#    volumes:
+#      - ./nginx/nginx.conf:/etc/nginx/nginx.conf
+#      - static_volume:/nginx/staticfiles
+#    depends_on:
+#      - habits
+#    networks:
+#      habits_network:
+#        external:
+#          name:
+#            -habits_network
+
+
 volumes:
   postgres_data:
   static_volume:
