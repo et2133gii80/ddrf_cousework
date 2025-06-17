@@ -21,7 +21,7 @@ RUN pip install --no-cache-dir -r requirements.txt
 COPY . .
 
 # Определяем переменные окружения
-ENV SECRET_KEY="django-insecure-5z-rd$i_e#sa7_ugp+%^w3m#k=y&d0*vx-4r8$swg#!p4(0pv)"
+ENV SECRET_KEY="gvg^*kur5bo$vc+7pk^&a=e--^kg7(0aeggj+)@b*d11&*1x@4"
 ENV CELERY_BROKER_URL="redis://localhost:6379"
 ENV CELERY_BACKEND="redis://localhost:6379"
 

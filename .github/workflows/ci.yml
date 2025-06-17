@@ -26,7 +26,7 @@ jobs:
       - name: Check out code
         uses: actions/checkout@v3
       - name: Set up SSH
-        uses: webfactory/ssh-agent@v0.6.0
+        uses: webfactory/ssh-agent@v0.9.0
         with:
           ssh-private-key: ${{ secrets.SSH_KEY }}
 
@@ -40,7 +40,7 @@ jobs:
         run: |
           ssh -o StrictHostKeyChecking=no ${{ secrets.SSH_USER }}@${{ secrets.SERVER_IP }} << 'EOF'
             cd ${{ secrets.DEPLOY_DIR }}
-            sudo apt install python3.12-venv
+            sudo apt install python3.12-venv -y
             python3 -m venv venv
             source venv/bin/activate
             pip install -r requirements.txt
